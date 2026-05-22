@@ -17,12 +17,12 @@ $\vec{a} = 2x \cdot \vec{e}_x - y \cdot \vec{e}_y + 2z \cdot \vec{e}_z$
 3. С помощью теоремы Гаусса — Остроградского вычислите поверхностный интеграл второго рода по ориентированной поверхности $S$:
 
 $$
-\iint_S x^3 \, dy \wedge dz + y^3 \, dz \wedge dx + z^3 \, dx \wedge dy
+\iint_S x^3 \ dy \wedge dz + y^3 \ dz \wedge dx + z^3 \ dx \wedge dy
 $$
 
 где $S$ — внутренняя сторона полной поверхности полушара $x^2 + y^2 + z^2 \le 1$, $x \ge 0$.
 
 4. Найдите циркуляцию векторного поля $\vec{a}$ вдоль замкнутого контура $\Gamma$, ориентированного по часовой стрелке при взгляде на него из начала координат:
 <p align="center">
-$\vec{a} = yz \cdot \vec{e}_x - z \cdot \vec{e}_y - xy \cdot \vec{e}_z, \quad \Gamma = \{ y^2 + z^2 = 9, \ x + z = 3 \}$
+$\vec{a} = yz \cdot \vec{e}_x - z \cdot \vec{e}_y - xy \cdot \vec{e}_z, \quad \Gamma = \{ y^2 + z^2 = 9 \ \text{и} \ x + z = 3 \}$
 </p>
