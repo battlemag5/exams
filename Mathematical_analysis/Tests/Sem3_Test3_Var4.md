@@ -3,7 +3,7 @@
 1. Измените порядок интегрирования:
 
 $$
-\int_{\pi/2}^{3\pi/4} dx \int_{\text{ctg}(x)}^{0} f(x, y) dt + \int_{3\pi/4}^{\pi} dx \int_{\text{tg}(x)}^{0} f(x, y) dy
+\int_{\pi/2}^{3\pi/4} dx \int_{\text{ctg}(x)}^{0} f(x, y) dy + \int_{3\pi/4}^{\pi} dx \int_{\text{tg}(x)}^{0} f(x, y) dy
 $$
 
 2. Используя полярную замену переменных, вычислите интеграл по области $D = \{ (x,y) \in \mathbb{R}^2 : 4y < x^2 + y^2 < 6y, \ x < y \}$:
