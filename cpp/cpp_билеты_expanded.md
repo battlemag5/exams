@@ -70,6 +70,12 @@ Inheritance creates `is-a` relationships (`public` inheritance). Liskov Substitu
 
 **Expanded Insight:** C++11 introduced the `override` and `final` specifiers. `override` ensures the method actually overrides a base class method (preventing silent bugs if signatures mismatch), while `final` prevents further derivation, allowing the compiler to perform devirtualization optimizations.
 
+``` c++
+A* b_ptr = &B_instance;
+b_ptr.foo();
+
+```
+
 **15. Virtual function implementation. VMT. Virtual calls in constructors and destructors. Adjusting for pointers, static_casts for down casts.**
 Virtual functions are implemented using a Virtual Method Table (VMT/vtable). Each polymorphic object contains a pointer (`vptr`) to its class's vtable. Calling a virtual function inside a constructor or destructor uses the local class's version (dynamic dispatch doesn't go "down" to derived classes yet to be constructed or already destroyed). Downcasting with `static_cast` simply adjusts pointers at compile time (unsafe if type is wrong); `dynamic_cast` checks the RTTI.
 
