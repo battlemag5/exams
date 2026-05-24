@@ -5,7 +5,7 @@
 1) $\forall$ п.в. $x \in A$ функция $f(x, y)$ непрерывна по $y$ в точке $y_0$, т.е. $$f(x, y) \xrightarrow{y \to y_0} f(x, y_0)$$ п.в. на $A$.
 2) $\exists g \in L(A, \mu) : \forall$ п.в. $x \in A$ и $\forall y \in U(y_0) \implies |f(x, y)| \le g(x)$. (Существует интегрируемая мажоранта).
 Тогда $F$ непрерывна в точке $y_0$, т.е. $$F(y) \xrightarrow{y \to y_0} F(y_0)$$.
-
+``
 ### 2. Теорема о дифференцируемости ИЗоП
 Пусть $\exists$ окрестность $U(y_0)$, такая что:
 1) $\exists \frac{\partial f}{\partial y_j}(x, y)$ для почти всех $x \in A$ и для всех $y \in U(y_0)$.
