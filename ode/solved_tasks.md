@@ -2,276 +2,276 @@
 
 ## Text Tasks from `Дифуры 2025 задачи.md` and `задачи диффуры.md`
 
-### Task 1
-**Equation:** $t^2 y y'' - (2y - t y')^2 = 0, \quad t>0$
-**Solution:**
-Substitute $y = u t^2$. Then $y' = u't^2 + 2ut$, and $y'' = u''t^2 + 4u't + 2u$.
-Notice that $2y - ty' = 2ut^2 - t(u't^2 + 2ut) = -u't^3$.
-Substituting into the equation:
+### Задача 1
+**Уравнение:** $t^2 y y'' - (2y - t y')^2 = 0, \quad t>0$
+**Решение:**
+Сделаем замену $y = u t^2$. Тогда $y' = u't^2 + 2ut$, и $y'' = u''t^2 + 4u't + 2u$.
+Заметим, что $2y - ty' = 2ut^2 - t(u't^2 + 2ut) = -u't^3$.
+Подставляя в уравнение:
 $t^2 (ut^2) (u''t^2 + 4u't + 2u) - (-u't^3)^2 = 0$
 $u t^4 (u''t^2 + 4u't + 2u) - (u')^2 t^6 = 0$
-Divide by $t^6$: $u u'' - (u')^2 + \frac{4}{t} u u' + \frac{2}{t^2} u^2 = 0$.
-This allows further integration to find $u(t)$ and subsequently $y(t)$.
+Разделим на $t^6$: $u u'' - (u')^2 + \frac{4}{t} u u' + \frac{2}{t^2} u^2 = 0$.
+Это позволяет провести дальнейшее интегрирование для нахождения $u(t)$ и затем $y(t)$.
 
-### Task 2
-**Equation:** $y''' - 8y = 3\cos(2t) - e^{2t}$
-**Solution:**
-Characteristic equation: $\lambda^3 - 8 = 0 \implies \lambda_1 = 2, \lambda_{2,3} = -1 \pm i\sqrt{3}$.
-Homogeneous solution: $y_h = C_1 e^{2t} + e^{-t}(C_2 \cos(\sqrt{3}t) + C_3 \sin(\sqrt{3}t))$.
-Particular solution for $3\cos(2t)$: $y_{p1} = A\cos(2t) + B\sin(2t)$.
-Particular solution for $-e^{2t}$: Since $\lambda=2$ is a root, $y_{p2} = C t e^{2t}$.
-Substitute and solve for constants.
+### Задача 2
+**Уравнение:** $y''' - 8y = 3\cos(2t) - e^{2t}$
+**Решение:**
+Характеристическое уравнение: $\lambda^3 - 8 = 0 \implies \lambda_1 = 2, \lambda_{2,3} = -1 \pm i\sqrt{3}$.
+Решение однородного уравнения: $y_h = C_1 e^{2t} + e^{-t}(C_2 \cos(\sqrt{3}t) + C_3 \sin(\sqrt{3}t))$.
+Частное решение для $3\cos(2t)$: $y_{p1} = A\cos(2t) + B\sin(2t)$.
+Частное решение для $-e^{2t}$: Так как $\lambda=2$ является корнем, то $y_{p2} = C t e^{2t}$.
+Подставьте и найдите константы.
 
-### Task 3
-**Problem:** Построить функцию Грина для:
+### Задача 3
+**Задача:** Построить функцию Грина для:
 $y'' - 16y = 0$
 $y(0) = 0$
 $y'(2) - 4y(2) = 0$
-**Solution:**
-Fundamental solutions: $y_1 = e^{4x}$, $y_2 = e^{-4x}$ or $\sinh(4x), \cosh(4x)$.
-Left boundary condition $y(0)=0 \implies y_L = \sinh(4x)$.
-Right boundary condition $y'(2) - 4y(2) = 0 \implies y_R = e^{4x}$ since $(e^{4x})' = 4e^{4x}$, and $4e^{8} - 4e^{8} = 0$.
-Wronskian $W(\sinh(4x), e^{4x}) = \sinh(4x) \cdot 4e^{4x} - 4\cosh(4x)e^{4x} = -4e^{4x}(\cosh(4x) - \sinh(4x)) = -4$.
-Green's function:
+**Решение:**
+Фундаментальные решения: $y_1 = e^{4x}$, $y_2 = e^{-4x}$ или $\sinh(4x), \cosh(4x)$.
+Левое краевое условие $y(0)=0 \implies y_L = \sinh(4x)$.
+Правое краевое условие $y'(2) - 4y(2) = 0 \implies y_R = e^{4x}$, так как $(e^{4x})' = 4e^{4x}$, и $4e^{8} - 4e^{8} = 0$.
+Определитель Вронского $W(\sinh(4x), e^{4x}) = \sinh(4x) \cdot 4e^{4x} - 4\cosh(4x)e^{4x} = -4e^{4x}(\cosh(4x) - \sinh(4x)) = -4$.
+Функция Грина:
 $G(x,s) = \begin{cases} \frac{\sinh(4x)e^{4s}}{-4}, & 0 \le x \le s \\ \frac{\sinh(4s)e^{4x}}{-4}, & s \le x \le 2 \end{cases}$
 
-### Task 4
-**Problem:** Какой минимальный порядок имеет ОДУ, если в его ФСР входят $x, e^x, \cos x$ и:
+### Задача 4
+**Задача:** Какой минимальный порядок имеет ОДУ, если в его ФСР входят $x, e^x, \cos x$ и:
 а) постоянные вещественные коэффициенты?
 б) переменные вещественно-значимые коэффициенты?
-**Solution:**
-а) For constant coefficients, roots must be $\lambda=0$ (mult 2 for $x$), $\lambda=1$ (mult 1 for $e^x$), $\lambda = \pm i$ (mult 1 for $\cos x$ requires conjugate $\sin x$). Total degree = $2 + 1 + 2 = 5$.
-б) For variable coefficients, we only need linear independence. Functions are $x, e^x, \cos x$. There are 3 linearly independent functions, so minimum order is 3.
+**Решение:**
+а) Для постоянных коэффициентов корнями должны быть $\lambda=0$ (кратности 2 для $x$), $\lambda=1$ (кратности 1 для $e^x$), $\lambda = \pm i$ (кратности 1 для $\cos x$ требуется сопряженный $\sin x$). Суммарная степень = $2 + 1 + 2 = 5$.
+б) Для переменных коэффициентов нужна только линейная независимость. Функции $x, e^x, \cos x$. Имеется 3 линейно независимые функции, поэтому минимальный порядок равен 3.
 
-### Task 5
-**Problem:** Найти $e^{tA}$, $A^2 = -I$
-**Solution:**
-Since $A^2 = -I$, the matrix $A$ acts like the imaginary unit $i$.
-Using Taylor series: $e^{tA} = \sum_{n=0}^{\infty} \frac{(tA)^n}{n!} = \cos(t)I + \sin(t)A$.
+### Задача 5
+**Задача:** Найти $e^{tA}$, $A^2 = -I$
+**Решение:**
+Поскольку $A^2 = -I$, матрица $A$ действует как мнимая единица $i$.
+Используя ряд Тейлора: $e^{tA} = \sum_{n=0}^{\infty} \frac{(tA)^n}{n!} = \cos(t)I + \sin(t)A$.
 
-### Task 6
-**Problem:** $t \cdot u_t + x \cdot u_x + (x+t)u_y = 0$
-**Solution:**
-Characteristics: $\frac{dt}{t} = \frac{dx}{x} = \frac{dy}{x+t}$
+### Задача 6
+**Задача:** $t \cdot u_t + x \cdot u_x + (x+t)u_y = 0$
+**Решение:**
+Характеристики: $\frac{dt}{t} = \frac{dx}{x} = \frac{dy}{x+t}$
 1) $\frac{dt}{t} = \frac{dx}{x} \implies \ln|x| = \ln|t| + C \implies \frac{x}{t} = C_1$.
 2) $dt/t = dy/(x+t) \implies dy = (x/t + 1)dt = (C_1 + 1)dt \implies y = (C_1 + 1)t + C_2 \implies C_2 = y - (x/t + 1)t = y - x - t$.
-General solution: $u(t,x,y) = F(\frac{x}{t}, y - x - t)$.
+Общее решение: $u(t,x,y) = F(\frac{x}{t}, y - x - t)$.
 
 ## Image Tasks
 
-### Image Task 1 (from `Дифуры 2025 задачи.png`)
-**Problem:**
+### Задача по картинке 1 (из `Дифуры 2025 задачи.png`)
+**Задача:**
 Найти при каком $\alpha$ краевая задача имеет единственное решение:
 $$y' - \begin{pmatrix} -2 & 2 \\ 0 & 2 \end{pmatrix} y = \begin{pmatrix} 0 \\ 13 \cos(3t) \end{pmatrix}, \quad t>0$$
 $$\sup_{t \ge 0} \|y(t)\| < +\infty, \quad y(t) = (y_1(t), y_2(t))^T$$
 $$\alpha y_1(0) + y_2(0) = 5$$
 
-**Solution:**
-From the system, the equation for $y_2$ is:
+**Решение:**
+Из системы уравнение для $y_2$ имеет вид:
 $y_2' - 2y_2 = 13\cos(3t)$.
-General solution: $y_2(t) = C_2 e^{2t} + y_{2,p}(t)$.
-Since we require bounded solutions ($\sup_{t \ge 0} \|y(t)\| < +\infty$), we must set $C_2 = 0$.
-A particular solution has the form $y_{2,p}(t) = A\cos(3t) + B\sin(3t)$.
-Substituting this yields $A = -2, B = 3$. Thus $y_2(t) = -2\cos(3t) + 3\sin(3t)$.
+Общее решение: $y_2(t) = C_2 e^{2t} + y_{2,p}(t)$.
+Поскольку мы требуем ограниченности решений ($\sup_{t \ge 0} \|y(t)\| < +\infty$), мы должны положить $C_2 = 0$.
+Частное решение имеет вид $y_{2,p}(t) = A\cos(3t) + B\sin(3t)$.
+Подставляя это, получаем $A = -2, B = 3$. Таким образом $y_2(t) = -2\cos(3t) + 3\sin(3t)$.
 
-Now substitute $y_2$ into the equation for $y_1$:
+Теперь подставим $y_2$ в уравнение для $y_1$:
 $y_1' + 2y_1 = 2y_2 = -4\cos(3t) + 6\sin(3t)$.
-General solution: $y_1(t) = C_1 e^{-2t} + y_{1,p}(t)$.
-Since $e^{-2t} \to 0$ as $t \to \infty$, $C_1$ can be arbitrary and the solution remains bounded.
-Finding $y_{1,p}$ yields $C=-2, D=0$, so $y_{1,p}(t) = -2\cos(3t)$.
+Общее решение: $y_1(t) = C_1 e^{-2t} + y_{1,p}(t)$.
+Так как $e^{-2t} \to 0$ при $t \to \infty$, $C_1$ может быть произвольным, и решение остается ограниченным.
+Поиск $y_{1,p}$ дает $C=-2, D=0$, так что $y_{1,p}(t) = -2\cos(3t)$.
 $y_1(t) = C_1 e^{-2t} - 2\cos(3t)$.
 
-Finally, apply the boundary condition:
+Наконец, применим граничное условие:
 $\alpha y_1(0) + y_2(0) = 5$.
 $y_1(0) = C_1 - 2$, $y_2(0) = -2$.
 $\alpha (C_1 - 2) - 2 = 5 \implies \alpha(C_1 - 2) = 7$.
-For the boundary value problem to have a unique solution, this algebraic equation for $C_1$ must have exactly one solution. This occurs if and only if $\alpha \neq 0$.
+Для того чтобы краевая задача имела единственное решение, это алгебраическое уравнение относительно $C_1$ должно иметь ровно одно решение. Это происходит тогда и только тогда, когда $\alpha \neq 0$.
 
-**Answer:** $\alpha \neq 0$.
+**Ответ:** $\alpha \neq 0$.
 
 
-### Image Task 2 (from `Дифуры 2025 задачи 2.png`)
-**Problem:**
+### Задача по картинке 2 (из `Дифуры 2025 задачи 2.png`)
+**Задача:**
 Ф-ция Грина. Реш. краевой задачи?
 $$y'' - 4y = f(t)$$
 $$y'(0) = 0$$
 $$y'(3) + 2y(3) = 0$$
 
-**Solution:**
-Homogeneous equation: $y'' - 4y = 0$.
-Fundamental solutions: $e^{2t}, e^{-2t}$ or $\cosh(2t), \sinh(2t)$.
-Left boundary condition: $y'(0) = 0 \implies y_L(t) = \cosh(2t)$.
-Right boundary condition: $y'(3) + 2y(3) = 0$.
-Let $y_R(t) = C_1 \cosh(2t) + C_2 \sinh(2t)$.
+**Решение:**
+Однородное уравнение: $y'' - 4y = 0$.
+Фундаментальные решения: $e^{2t}, e^{-2t}$ или $\cosh(2t), \sinh(2t)$.
+Левое граничное условие: $y'(0) = 0 \implies y_L(t) = \cosh(2t)$.
+Правое граничное условие: $y'(3) + 2y(3) = 0$.
+Пусть $y_R(t) = C_1 \cosh(2t) + C_2 \sinh(2t)$.
 $y_R'(3) = 2C_1 \sinh(6) + 2C_2 \cosh(6)$.
 $2y_R(3) = 2C_1 \cosh(6) + 2C_2 \sinh(6)$.
 $y_R'(3) + 2y_R(3) = 2C_1(\sinh(6) + \cosh(6)) + 2C_2(\cosh(6) + \sinh(6)) = 2e^6(C_1 + C_2) = 0$.
-Thus $C_1 = -C_2$. Let $C_1 = 1, C_2 = -1 \implies y_R(t) = \cosh(2t) - \sinh(2t) = e^{-2t}$.
+Таким образом, $C_1 = -C_2$. Пусть $C_1 = 1, C_2 = -1 \implies y_R(t) = \cosh(2t) - \sinh(2t) = e^{-2t}$.
 
-Wronskian $W(y_L, y_R)$:
+Вронскиан $W(y_L, y_R)$:
 $W(\cosh(2t), e^{-2t}) = \cosh(2t) (-2e^{-2t}) - (2\sinh(2t))(e^{-2t}) = -2e^{-2t}(\cosh(2t) + \sinh(2t)) = -2e^{-2t}e^{2t} = -2$.
 
-Green's function:
+Функция Грина:
 $G(t, s) = \begin{cases}
 \frac{\cosh(2t) e^{-2s}}{-2}, & 0 \le t \le s \\
 \frac{\cosh(2s) e^{-2t}}{-2}, & s \le t \le 3
 \end{cases}$
 
-### Image Task 3 (from `Дифуры 2025 задачи 3.png`)
-**Problem:**
+### Задача по картинке 3 (из `Дифуры 2025 задачи 3.png`)
+**Задача:**
 Решить. Найти кол-во решений.
 $\begin{cases} 8 t y y' - 5 y^2 = 7 t^3 \\ y(1) = 1 \end{cases}$
 
-**Solution:**
-Use the substitution $z = y^2$, so $z' = 2yy'$.
-The equation becomes: $4 t z' - 5 z = 7 t^3$.
-Rewrite as a standard linear equation:
+**Решение:**
+Используем замену $z = y^2$, тогда $z' = 2yy'$.
+Уравнение становится: $4 t z' - 5 z = 7 t^3$.
+Перепишем как стандартное линейное уравнение:
 $z' - \frac{5}{4t} z = \frac{7}{4} t^2$.
-The integrating factor is $\mu(t) = e^{-\int \frac{5}{4t} dt} = t^{-5/4}$.
-Multiplying by $\mu(t)$:
+Интегрирующий множитель $\mu(t) = e^{-\int \frac{5}{4t} dt} = t^{-5/4}$.
+Умножаем на $\mu(t)$:
 $(z t^{-5/4})' = \frac{7}{4} t^2 t^{-5/4} = \frac{7}{4} t^{3/4}$.
-Integrating both sides:
+Интегрируем обе части:
 $z t^{-5/4} = \frac{7}{4} \cdot \frac{4}{7} t^{7/4} + C = t^{7/4} + C$.
 $z = t^3 + C t^{5/4}$.
-Since $z = y^2$, we have $y^2 = t^3 + C t^{5/4}$.
-Apply the initial condition $y(1) = 1$:
+Так как $z = y^2$, имеем $y^2 = t^3 + C t^{5/4}$.
+Применяем начальное условие $y(1) = 1$:
 $1^2 = 1^3 + C \cdot 1^{5/4} \implies 1 = 1 + C \implies C = 0$.
-So, $y^2 = t^3$, which gives $y = \pm t^{3/2}$.
-Since $y(1) = 1$, we must choose the positive branch:
+Итак, $y^2 = t^3$, что дает $y = \pm t^{3/2}$.
+Так как $y(1) = 1$, мы должны выбрать положительную ветвь:
 $y(t) = t^{3/2}$.
-**Number of solutions:**
-At the point $(1, 1)$, the equation can be written as $y' = \frac{5y^2 + 7t^3}{8ty}$. The right-hand side is continuously differentiable in a neighborhood of $(1, 1)$, so by the Picard-Lindelöf theorem, there exists exactly **1** unique solution.
+**Количество решений:**
+В точке $(1, 1)$ уравнение можно записать как $y' = \frac{5y^2 + 7t^3}{8ty}$. Правая часть непрерывно дифференцируема в окрестности $(1, 1)$, поэтому по теореме Пикара-Линделёфа существует ровно **1** единственное решение.
 
-### Image Task 4 (from `Дифуры 2025 задачи 4.png`)
-**Problem:**
+### Задача по картинке 4 (из `Дифуры 2025 задачи 4.png`)
+**Задача:**
 Найти собственные значения и собственные функции краевой задачи:
 $$t^2 y'' + 5 t y' + 4 y = \lambda y$$
 $$y(1) = 0$$
 $$3 y'(3) + 2 y(3) = 0$$
 
-**Solution:**
-Rewrite the equation as an Euler equation: $t^2 y'' + 5 t y' + (4 - \lambda) y = 0$.
-Use the substitution $t = e^s$, converting it to an equation with constant coefficients:
+**Решение:**
+Перепишем уравнение как уравнение Эйлера: $t^2 y'' + 5 t y' + (4 - \lambda) y = 0$.
+Сделаем замену $t = e^s$, преобразуя его в уравнение с постоянными коэффициентами:
 $y_{ss} + 4 y_s + (4 - \lambda) y = 0$.
-Characteristic equation: $k^2 + 4k + (4 - \lambda) = 0 \implies (k+2)^2 = \lambda$.
-Let's analyze the cases for $\lambda$:
-1) $\lambda \ge 0$: It can be shown that there are no non-trivial solutions satisfying both boundary conditions (the roots are real, leading to exponential/power functions which cannot satisfy $y(1)=0$ and $3y'(3)+2y(3)=0$ simultaneously unless trivial).
-2) $\lambda < 0$: Let $\lambda = -\mu^2$ where $\mu > 0$. The roots are $k = -2 \pm i\mu$.
-The general solution is $y(t) = t^{-2} \left( C_1 \cos(\mu \ln t) + C_2 \sin(\mu \ln t) \right)$.
-Left boundary condition $y(1) = 0$:
+Характеристическое уравнение: $k^2 + 4k + (4 - \lambda) = 0 \implies (k+2)^2 = \lambda$.
+Проанализируем случаи для $\lambda$:
+1) $\lambda \ge 0$: Можно показать, что нет нетривиальных решений, удовлетворяющих обоим граничным условиям (корни вещественные, что ведет к экспоненциальным/степенным функциям, которые не могут удовлетворить $y(1)=0$ и $3y'(3)+2y(3)=0$ одновременно, кроме тривиального).
+2) $\lambda < 0$: Пусть $\lambda = -\mu^2$, где $\mu > 0$. Корни $k = -2 \pm i\mu$.
+Общее решение: $y(t) = t^{-2} \left( C_1 \cos(\mu \ln t) + C_2 \sin(\mu \ln t) \right)$.
+Левое граничное условие $y(1) = 0$:
 $1^{-2} (C_1 \cos(0) + C_2 \sin(0)) = 0 \implies C_1 = 0$.
-Thus, $y(t) = C_2 t^{-2} \sin(\mu \ln t)$.
-To use the right boundary condition, we need the derivative:
+Таким образом, $y(t) = C_2 t^{-2} \sin(\mu \ln t)$.
+Чтобы использовать правое граничное условие, нам нужна производная:
 $y'(t) = C_2 \left[ -2 t^{-3} \sin(\mu \ln t) + \mu t^{-3} \cos(\mu \ln t) \right]$.
-Substitute into $3 y'(3) + 2 y(3) = 0$:
+Подставим в $3 y'(3) + 2 y(3) = 0$:
 $3 C_2 \left[ -2 \cdot 3^{-3} \sin(\mu \ln 3) + \mu \cdot 3^{-3} \cos(\mu \ln 3) \right] + 2 C_2 \cdot 3^{-2} \sin(\mu \ln 3) = 0$.
-Divide by $C_2 3^{-2}$ (since $C_2 \neq 0$):
+Разделим на $C_2 3^{-2}$ (так как $C_2 \neq 0$):
 $-\frac{2}{3} \sin(\mu \ln 3) + \frac{\mu}{3} \cos(\mu \ln 3) + \frac{2}{3} \sin(\mu \ln 3) = 0$.
 $\frac{\mu}{3} \cos(\mu \ln 3) = 0$.
-Since $\mu \neq 0$, we must have $\cos(\mu \ln 3) = 0 \implies \mu \ln 3 = \frac{\pi}{2} + \pi n$, for $n = 0, 1, 2, \dots$
+Так как $\mu \neq 0$, должно выполняться $\cos(\mu \ln 3) = 0 \implies \mu \ln 3 = \frac{\pi}{2} + \pi n$, для $n = 0, 1, 2, \dots$
 $\mu_n = \frac{\pi(2n+1)}{2 \ln 3}$.
 
-**Answer:**
-Eigenvalues: $\lambda_n = -\left( \frac{\pi(2n+1)}{2 \ln 3} \right)^2, \quad n \in \mathbb{Z}_{\ge 0}$.
-Eigenfunctions: $y_n(t) = t^{-2} \sin\left( \frac{\pi(2n+1)}{2 \ln 3} \ln t \right)$.
+**Ответ:**
+Собственные значения: $\lambda_n = -\left( \frac{\pi(2n+1)}{2 \ln 3} \right)^2, \quad n \in \mathbb{Z}_{\ge 0}$.
+Собственные функции: $y_n(t) = t^{-2} \sin\left( \frac{\pi(2n+1)}{2 \ln 3} \ln t \right)$.
 
-### Image Task 5 (from `Дифуры 2025 задачи 5.png`)
-**Problem:**
+### Задача по картинке 5 (из `Дифуры 2025 задачи 5.png`)
+**Задача:**
 Выписать все компоненты решения задачи:
 $\begin{cases} x' = x - 3y + z \\ y' = x - 2y \\ z' = y - z \end{cases}$
 $x(0) = 1, y(0) = 0, z(0) = -1$.
 Сколько существует решений?
 
-**Solution:**
-The system is $X' = A X$ with $A = \begin{pmatrix} 1 & -3 & 1 \\ 1 & -2 & 0 \\ 0 & 1 & -1 \end{pmatrix}$.
-Characteristic polynomial: $\det(A - \lambda I) = -\lambda^3 - 2\lambda^2 - 2\lambda = -\lambda(\lambda^2 + 2\lambda + 2) = 0$.
-Eigenvalues: $\lambda_1 = 0, \lambda_{2,3} = -1 \pm i$.
-Eigenvector for $\lambda_1 = 0$: $v_1 = (2, 1, 1)^T$.
-Eigenvector for $\lambda_2 = -1+i$: Solving $(A - (-1+i)I)v = 0$ yields $v_2 = (-1+i, i, 1)^T$.
-The complex solution is $X(t) = e^{(-1+i)t} \begin{pmatrix} -1+i \\ i \\ 1 \end{pmatrix} = e^{-t}(\cos t + i\sin t) \begin{pmatrix} -1+i \\ i \\ 1 \end{pmatrix}$.
-Taking real and imaginary parts:
+**Решение:**
+Система имеет вид $X' = A X$, где $A = \begin{pmatrix} 1 & -3 & 1 \\ 1 & -2 & 0 \\ 0 & 1 & -1 \end{pmatrix}$.
+Характеристический многочлен: $\det(A - \lambda I) = -\lambda^3 - 2\lambda^2 - 2\lambda = -\lambda(\lambda^2 + 2\lambda + 2) = 0$.
+Собственные значения: $\lambda_1 = 0, \lambda_{2,3} = -1 \pm i$.
+Собственный вектор для $\lambda_1 = 0$: $v_1 = (2, 1, 1)^T$.
+Собственный вектор для $\lambda_2 = -1+i$: Решая $(A - (-1+i)I)v = 0$, получаем $v_2 = (-1+i, i, 1)^T$.
+Комплексное решение: $X(t) = e^{(-1+i)t} \begin{pmatrix} -1+i \\ i \\ 1 \end{pmatrix} = e^{-t}(\cos t + i\sin t) \begin{pmatrix} -1+i \\ i \\ 1 \end{pmatrix}$.
+Берем вещественную и мнимую части:
 $\text{Re} = e^{-t} \begin{pmatrix} -\cos t - \sin t \\ -\sin t \\ \cos t \end{pmatrix}, \quad \text{Im} = e^{-t} \begin{pmatrix} \cos t - \sin t \\ \cos t \\ \sin t \end{pmatrix}$.
-General solution:
+Общее решение:
 $X(t) = C_1 \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix} + C_2 e^{-t} \begin{pmatrix} -\cos t - \sin t \\ -\sin t \\ \cos t \end{pmatrix} + C_3 e^{-t} \begin{pmatrix} \cos t - \sin t \\ \cos t \\ \sin t \end{pmatrix}$.
-Using initial conditions at $t=0$:
+Используя начальные условия при $t=0$:
 $x(0) = 2C_1 - C_2 + C_3 = 1$
 $y(0) = C_1 + C_3 = 0 \implies C_3 = -C_1$
 $z(0) = C_1 + C_2 = -1 \implies C_2 = -1 - C_1$
-Substitute $C_2$ and $C_3$ into the first equation:
+Подставим $C_2$ и $C_3$ в первое уравнение:
 $2C_1 - (-1 - C_1) + (-C_1) = 1 \implies 2C_1 + 1 = 1 \implies C_1 = 0$.
-Thus $C_3 = 0$ and $C_2 = -1$.
-Substituting back, we get the components:
+Таким образом $C_3 = 0$ и $C_2 = -1$.
+Подставляя обратно, получаем компоненты:
 $x(t) = e^{-t}(\cos t + \sin t)$
 $y(t) = e^{-t}\sin t$
 $z(t) = -e^{-t}\cos t$
-**Number of solutions:** Since this is a linear system of ODEs with continuous coefficients, the initial value problem has exactly **1** unique solution globally according to the Picard-Lindelöf theorem.
+**Количество решений:** Поскольку это линейная система ОДУ с непрерывными коэффициентами, задача Коши с начальными условиями имеет ровно **1** единственное решение глобально согласно теореме Пикара-Линделёфа.
 
-### Image Task 6 (from `Дифуры 2025 задачи 6.png`)
-**Problem:**
+### Задача по картинке 6 (из `Дифуры 2025 задачи 6.png`)
+**Задача:**
 При каких непрерывных $f(t)$ существуют решения краевой задачи
 $y'' + (\pi/8)^2 y = f(t), \quad 0 < t < 4$
 $y'(0) = y(4) = 0$?
 Выписать все решения.
 
-**Solution:**
-We use the Fredholm alternative. First, consider the homogeneous problem:
+**Решение:**
+Используем альтернативу Фредгольма. Сначала рассмотрим однородную задачу:
 $y'' + (\pi/8)^2 y = 0$.
-General solution: $y_h(t) = C_1 \cos(\frac{\pi}{8}t) + C_2 \sin(\frac{\pi}{8}t)$.
-Boundary conditions:
+Общее решение: $y_h(t) = C_1 \cos(\frac{\pi}{8}t) + C_2 \sin(\frac{\pi}{8}t)$.
+Граничные условия:
 $y_h'(0) = C_2 \frac{\pi}{8} = 0 \implies C_2 = 0$.
-$y_h(4) = C_1 \cos(\pi/2) = 0 \implies$ any $C_1$ works.
-So the homogeneous problem has a non-trivial solution $\phi(t) = \cos(\frac{\pi}{8}t)$.
-Because the problem is self-adjoint, the non-homogeneous problem has a solution if and only if $f(t)$ is orthogonal to $\phi(t)$:
+$y_h(4) = C_1 \cos(\pi/2) = 0 \implies$ любое $C_1$ подходит.
+Таким образом, однородная задача имеет нетривиальное решение $\phi(t) = \cos(\frac{\pi}{8}t)$.
+Поскольку задача является самосопряженной, неоднородная задача имеет решение тогда и только тогда, когда $f(t)$ ортогонально $\phi(t)$:
 $\int_0^4 f(t) \cos(\frac{\pi}{8}t) dt = 0$.
-To find all solutions, we use variation of parameters.
+Чтобы найти все решения, используем метод вариации постоянных.
 $y(t) = c_1(t) \cos(\frac{\pi}{8}t) + c_2(t) \sin(\frac{\pi}{8}t)$.
-This gives $c_1'(t) = -\frac{8}{\pi} f(t) \sin(\frac{\pi}{8}t)$ and $c_2'(t) = \frac{8}{\pi} f(t) \cos(\frac{\pi}{8}t)$.
-Integrating from $0$ to $t$:
+Это дает $c_1'(t) = -\frac{8}{\pi} f(t) \sin(\frac{\pi}{8}t)$ и $c_2'(t) = \frac{8}{\pi} f(t) \cos(\frac{\pi}{8}t)$.
+Интегрируя от $0$ до $t$:
 $y_p(t) = \frac{8}{\pi} \int_0^t f(s) \left[ \sin(\frac{\pi}{8}s) \cos(\frac{\pi}{8}t) - \cos(\frac{\pi}{8}s) \sin(\frac{\pi}{8}t) \right] ds = \frac{8}{\pi} \int_0^t f(s) \sin\left(\frac{\pi}{8}(t-s)\right) ds$.
-The general solution to the boundary value problem is:
+Общее решение краевой задачи:
 $y(t) = C \cos(\frac{\pi}{8}t) + \frac{8}{\pi} \int_0^t f(s) \sin\left(\frac{\pi}{8}(t-s)\right) ds, \quad C \in \mathbb{R}$.
 
-**Answer:**
-Solutions exist if and only if $\int_0^4 f(t) \cos(\frac{\pi}{8}t) dt = 0$.
-All solutions are given by $y(t) = C \cos(\frac{\pi}{8}t) + \frac{8}{\pi} \int_0^t f(s) \sin\left(\frac{\pi}{8}(t-s)\right) ds$.
+**Ответ:**
+Решения существуют тогда и только тогда, когда $\int_0^4 f(t) \cos(\frac{\pi}{8}t) dt = 0$.
+Все решения задаются формулой $y(t) = C \cos(\frac{\pi}{8}t) + \frac{8}{\pi} \int_0^t f(s) \sin\left(\frac{\pi}{8}(t-s)\right) ds$.
 
-### Image Task 7 (from `Дифуры 2025 задачи 7.png`)
-**Problem:**
+### Задача по картинке 7 (из `Дифуры 2025 задачи 7.png`)
+**Задача:**
 Найти общее решение уравнения:
 $x^3 y''' + 3 x^2 y'' + x y' - 27 y = 27 x^3, \quad x > 0$.
 
-**Solution:**
-This is an Euler equation. Use the substitution $x = e^t$, so $t = \ln x$. Let $y_t$ denote derivative with respect to $t$.
-We have:
+**Решение:**
+Это уравнение Эйлера. Сделаем замену $x = e^t$, так что $t = \ln x$. Пусть $y_t$ обозначает производную по $t$.
+Имеем:
 $x y' = y_t$
 $x^2 y'' = y_{tt} - y_t$
 $x^3 y''' = y_{ttt} - 3y_{tt} + 2y_t$
-Substitute into the equation:
+Подставляем в уравнение:
 $(y_{ttt} - 3y_{tt} + 2y_t) + 3(y_{tt} - y_t) + y_t - 27y = 27 e^{3t}$
-Simplifying:
+Упрощаем:
 $y_{ttt} - 27y = 27 e^{3t}$.
-Characteristic equation of the homogeneous part: $\lambda^3 - 27 = 0$.
-Roots: $\lambda_1 = 3$, $\lambda_{2,3} = -\frac{3}{2} \pm i\frac{3\sqrt{3}}{2}$.
-Homogeneous solution:
+Характеристическое уравнение однородной части: $\lambda^3 - 27 = 0$.
+Корни: $\lambda_1 = 3$, $\lambda_{2,3} = -\frac{3}{2} \pm i\frac{3\sqrt{3}}{2}$.
+Решение однородного уравнения:
 $y_h(t) = C_1 e^{3t} + e^{-3t/2} \left( C_2 \cos\left(\frac{3\sqrt{3}}{2}t\right) + C_3 \sin\left(\frac{3\sqrt{3}}{2}t\right) \right)$.
-For the particular solution $y_p$, since $27 e^{3t}$ matches the root $\lambda = 3$ (multiplicity 1), we look for $y_p = A t e^{3t}$.
+Для частного решения $y_p$, поскольку $27 e^{3t}$ совпадает с корнем $\lambda = 3$ (кратности 1), ищем $y_p = A t e^{3t}$.
 $y_p' = A e^{3t}(1 + 3t)$
 $y_p'' = A e^{3t}(6 + 9t)$
 $y_p''' = A e^{3t}(27 + 27t)$
-Substitute into the equation:
+Подставляем в уравнение:
 $A e^{3t}(27 + 27t) - 27(A t e^{3t}) = 27 e^{3t} \implies 27 A e^{3t} = 27 e^{3t} \implies A = 1$.
-So $y_p(t) = t e^{3t}$.
-The general solution in $t$ is $y(t) = y_h(t) + y_p(t)$.
-Substitute back $t = \ln x, e^{3t} = x^3$:
+Итак, $y_p(t) = t e^{3t}$.
+Общее решение относительно $t$ равно $y(t) = y_h(t) + y_p(t)$.
+Делаем обратную замену $t = \ln x, e^{3t} = x^3$:
 $y(x) = C_1 x^3 + x^{-3/2} \left( C_2 \cos\left(\frac{3\sqrt{3}}{2}\ln x\right) + C_3 \sin\left(\frac{3\sqrt{3}}{2}\ln x\right) \right) + x^3 \ln x$.
 
-### Image Task 8 (from `задачи диффуры.png`)
-**Problem:**
+### Задача по картинке 8 (из `задачи диффуры.png`)
+**Задача:**
 Задача 19.
 Найти производную $\frac{\partial y}{\partial \mu}\big|_{\mu=0}$, где $y(x, \mu)$ - решение задачи
 $y' = 2x + \mu y^2, \quad y(0) = \mu - 1$.
 
-**Solution:**
+**Решение:**
 Пусть $u(x) = \frac{\partial y}{\partial \mu}(x, 0)$.
 Продифференцируем уравнение по $\mu$:
 $\frac{\partial}{\partial \mu} \left(\frac{\partial y}{\partial x}\right) = \frac{\partial}{\partial \mu} (2x + \mu y^2) \implies \frac{\partial}{\partial x} \left(\frac{\partial y}{\partial \mu}\right) = y^2 + 2\mu y \frac{\partial y}{\partial \mu}$.
@@ -296,15 +296,15 @@ $\frac{\partial y}{\partial \mu}(0, \mu) = 1 \implies u(0) = 1$.
 $u(0) = C_1 = 1$.
 Таким образом, $u(x) = \frac{x^5}{5} - \frac{2x^3}{3} + x + 1$.
 
-**Answer:** $\frac{x^5}{5} - \frac{2x^3}{3} + x + 1$.
+**Ответ:** $\frac{x^5}{5} - \frac{2x^3}{3} + x + 1$.
 
-### Image Task 9 (from `задачи диффуры 1.png`)
-**Problem:**
+### Задача по картинке 9 (из `задачи диффуры 1.png`)
+**Задача:**
 Задача 9.
 Найти фундаментальную систему решений для системы линейных уравнений
 $$ \begin{pmatrix} \dot{x}_1 \\ \dots \\ \dot{x}_n \end{pmatrix} = \begin{pmatrix} 1 & \dots & 1 \\ \dots & \dots & \dots \\ 1 & \dots & 1 \end{pmatrix} \begin{pmatrix} x_1 \\ \dots \\ x_n \end{pmatrix} $$
 
-**Solution:**
+**Решение:**
 Запишем систему в матричном виде $\dot{X} = A X$, где $A$ — матрица размера $n \times n$, состоящая из единиц.
 Ранг матрицы $A$ равен 1. След матрицы (trace) равен $n$.
 Следовательно, матрица $A$ имеет собственное значение $\lambda_1 = n$ кратности 1 и собственное значение $\lambda_2 = 0$ кратности $n-1$.
@@ -322,16 +322,16 @@ $\dots$
 $v_n = (1, 0, 0, \dots, -1)^T$.
 Соответствующие решения имеют вид $X_k(t) = v_k e^{0t} = v_k$.
 
-**Answer:**
+**Ответ:**
 Фундаментальная система решений состоит из $n$ векторов:
 $X_1(t) = e^{nt} \begin{pmatrix} 1 \\ 1 \\ \dots \\ 1 \end{pmatrix}, \quad X_2(t) = \begin{pmatrix} 1 \\ -1 \\ 0 \\ \dots \\ 0 \end{pmatrix}, \quad X_3(t) = \begin{pmatrix} 1 \\ 0 \\ -1 \\ \dots \\ 0 \end{pmatrix}, \quad \dots, \quad X_n(t) = \begin{pmatrix} 1 \\ 0 \\ 0 \\ \dots \\ -1 \end{pmatrix}$.
 
-### Image Task 10 (from `задачи диффуры 2.png`)
-**Problem:**
+### Задача по картинке 10 (из `задачи диффуры 2.png`)
+**Задача:**
 Задача 26.
 $$ \begin{cases} \frac{dy}{dt} = y(t) + \int_0^1 y(s)ds \\ y(0) = 1 \end{cases} $$
 
-**Solution:**
+**Решение:**
 Это интегро-дифференциальное уравнение. Обозначим определённый интеграл за константу:
 $\int_0^1 y(s)ds = C$.
 Тогда уравнение примет вид линейного дифференциального уравнения первого порядка с постоянным свободным членом:
@@ -355,7 +355,7 @@ $C - Ce + 2C = e - 1 \implies C(3 - e) = e - 1 \implies C = \frac{e-1}{3-e}$.
 Подставим найденное значение $C$ в выражение для $y(t)$:
 $y(t) = \left(1 + \frac{e-1}{3-e}\right)e^t - \frac{e-1}{3-e} = \left(\frac{3-e+e-1}{3-e}\right)e^t - \frac{e-1}{3-e} = \frac{2e^t - e + 1}{3-e}$.
 
-**Answer:** $y(t) = \frac{2e^t - e + 1}{3-e}$.
+**Ответ:** $y(t) = \frac{2e^t - e + 1}{3-e}$.
 
 ### Image Task 11 (from `задачи диффуры 6.png`)
 **Problem:**
@@ -1405,30 +1405,30 @@ $\frac{dz}{dx} = A(x)z$.
 Это и доказывает, что все решения линейной системы устойчивы или неустойчивы одновременно.
 Ч.т.д.
 
-### Image Task 41 (Re-extracted from `Дифуры 2025 задачи 4.png`)
-**Problem:**
+### Задача по картинке 41 (Повторно извлекается из `Дифуры 2025 задачи 4.png`)
+**Задача:**
 Найти собственные значения и собственные функции краевой задачи:
 $$t^2 y'' + 5 t y' + 4 y = \lambda y$$
 $$y(1) = 0$$
 $$3 y'(3) + 2 y(3) = 0$$
 
-**Solution:**
-Rewrite the equation as an Euler equation: $t^2 y'' + 5 t y' + (4 - \lambda) y = 0$.
-Use the substitution $t = e^s$, converting it to an equation with constant coefficients:
+**Решение:**
+Перепишем уравнение как уравнение Эйлера: $t^2 y'' + 5 t y' + (4 - \lambda) y = 0$.
+Сделаем замену $t = e^s$, преобразуя его в уравнение с постоянными коэффициентами:
 $y_{ss} + 4 y_s + (4 - \lambda) y = 0$.
-Characteristic equation: $k^2 + 4k + (4 - \lambda) = 0 \implies (k+2)^2 = \lambda$.
+Характеристическое уравнение: $k^2 + 4k + (4 - \lambda) = 0 \implies (k+2)^2 = \lambda$.
 
-Case $\lambda < 0$: Let $\lambda = -\mu^2$ where $\mu > 0$. The roots are $k = -2 \pm i\mu$.
-The general solution is $y(t) = t^{-2} \left( C_1 \cos(\mu \ln t) + C_2 \sin(\mu \ln t) \right)$.
-Left boundary condition $y(1) = 0 \implies C_1 = 0$.
+Случай $\lambda < 0$: Пусть $\lambda = -\mu^2$, где $\mu > 0$. Корни $k = -2 \pm i\mu$.
+Общее решение: $y(t) = t^{-2} \left( C_1 \cos(\mu \ln t) + C_2 \sin(\mu \ln t) \right)$.
+Левое граничное условие $y(1) = 0 \implies C_1 = 0$.
 $y(t) = C_2 t^{-2} \sin(\mu \ln t)$.
 $y'(t) = C_2 \left[ -2 t^{-3} \sin(\mu \ln t) + \mu t^{-3} \cos(\mu \ln t) \right]$.
-Substitute into $3 y'(3) + 2 y(3) = 0$:
+Подставим в $3 y'(3) + 2 y(3) = 0$:
 $3 C_2 \left[ -2 \cdot 3^{-3} \sin(\mu \ln 3) + \mu \cdot 3^{-3} \cos(\mu \ln 3) \right] + 2 C_2 \cdot 3^{-2} \sin(\mu \ln 3) = 0$.
-Dividing by $C_2 3^{-2}$ gives $\mu \cos(\mu \ln 3) = 0$.
-Since $\mu \neq 0$, $\cos(\mu \ln 3) = 0 \implies \mu \ln 3 = \frac{\pi}{2} + \pi n$, for $n = 0, 1, 2, \dots$
+Деление на $C_2 3^{-2}$ дает $\mu \cos(\mu \ln 3) = 0$.
+Поскольку $\mu \neq 0$, $\cos(\mu \ln 3) = 0 \implies \mu \ln 3 = \frac{\pi}{2} + \pi n$, для $n = 0, 1, 2, \dots$
 $\mu_n = \frac{\pi(2n+1)}{2 \ln 3}$.
 
-**Answer:**
-Eigenvalues: $\lambda_n = -\left( \frac{\pi(2n+1)}{2 \ln 3} \right)^2, \quad n \in \mathbb{Z}_{\ge 0}$.
-Eigenfunctions: $y_n(t) = t^{-2} \sin\left( \frac{\pi(2n+1)}{2 \ln 3} \ln t \right)$.
+**Ответ:**
+Собственные значения: $\lambda_n = -\left( \frac{\pi(2n+1)}{2 \ln 3} \right)^2, \quad n \in \mathbb{Z}_{\ge 0}$.
+Собственные функции: $y_n(t) = t^{-2} \sin\left( \frac{\pi(2n+1)}{2 \ln 3} \ln t \right)$.
