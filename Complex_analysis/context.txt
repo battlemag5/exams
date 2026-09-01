@@ -1,1 +1,0 @@
-I am in the process of manually correcting LaTeX in the answers.md file. I have completed questions 1-18 and am currently working on questions 19-24. I am going through the file section by section, making corrections. The user has interrupted with a message "save context for safety", so I am saving this note.
